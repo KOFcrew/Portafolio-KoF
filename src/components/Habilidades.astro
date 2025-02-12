@@ -1,32 +1,29 @@
 ---
 import "../styles/global.css";
 const skills = [
-  { name: "HTML-5", description: "Build websites with the latest web technologies.", image: "/html5.svg" },
-  { name: "CSS", description: "Style your website with the latest web technologies.", image: "/css_old.svg" },
-  { name: "JAVASCRIPT", description: "Connect your site to the most popular apps out there.", image: "/javascript.svg" },
-  { name: "TAILWIND", description: "Build websites with the latest web technologies.", image: "/tailwindcss.svg" },
-  { name: "ASTRO", description: "Build websites with the latest web technologies.", image: "/astro.svg" },
-  { name: "REACT", description: "Build websites with the latest web technologies.", image: "/react_light.svg" },
-  { name: "PHP", description: "Build websites with the latest web technologies.", image: "/php.svg" },
-  { name: "LARAVEL", description: "Build websites with the latest web technologies.", image: "/laravel.svg" },
-  { name: "PYTHON", description: "Build websites with the latest web technologies.", image: "/python.svg" },
+  { name: "HTML-5", description: "Build websites with the latest web technologies.", image: "/html5.svg", width: 96, height: 96 },
+  { name: "CSS", description: "Style your website with the latest web technologies.", image: "/css_old.svg", width: 96, height: 96 },
+  { name: "JAVASCRIPT", description: "Connect your site to the most popular apps out there.", image: "/javascript.svg", width: 96, height: 96 },
+  { name: "TAILWIND", description: "Build websites with the latest web technologies.", image: "/tailwindcss.svg", width: 96, height: 96 },
+  { name: "ASTRO", description: "Build websites with the latest web technologies.", image: "/astro.svg", width: 96, height: 96 },
+  { name: "REACT", description: "Build websites with the latest web technologies.", image: "/react_light.svg", width: 96, height: 96 },
+  { name: "PHP", description: "Build websites with the latest web technologies.", image: "/php.svg", width: 96, height: 96 },
+  { name: "LARAVEL", description: "Build websites with the latest web technologies.", image: "/laravel.svg", width: 96, height: 96 },
+  { name: "PYTHON", description: "Build websites with the latest web technologies.", image: "/python.svg", width: 96, height: 96 },
 ];
-
 ---
 
 <section class="bg-gray-900 text-white py-12">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-teal-400 text-3xl font-bold mb-8">Habilidades</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-6 my-6">
-        {skills.map(skill => (
-          <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
-            <img src={skill.image} alt={skill.name} class="h-24 mx-auto mb-4 rounded-lg" />
-            <h3 class="text-orange-400 text-lg font-semibold">{skill.name}</h3>
-            <p class="text-gray-400 text-sm mt-2">{skill.description}</p>
-          </div>
-        ))}
-      </div>
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-teal-400 text-3xl font-bold mb-8">Habilidades</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-6 my-6">
+      {skills.map(skill => (
+        <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
+          <img src={skill.image} alt={skill.name} class="h-24 mx-auto mb-4 rounded-lg" width={skill.width} height={skill.height} />
+          <h3 class="text-orange-400 text-lg font-semibold">{skill.name}</h3>
+          <p class="text-gray-400 text-sm mt-2">{skill.description}</p>
+        </div>
+      ))}
     </div>
+  </div>
 </section>
-
-  
