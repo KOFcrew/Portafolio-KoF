@@ -6,12 +6,14 @@ import Boton from "./Boton.astro";
   <div class="relative w-full h-[85vh] mx-10 rounded-[30px] max-w-[2000px] p-10 md:p-16 overflow-hidden">
     <!-- Imagen optimizada -->
     <img 
-      src="/bannerH.webp"
-      alt="Banner principal"
-      class="absolute inset-0 w-full h-full object-cover rounded-[30px]"
-      loading="eager"
-      fetchpriority="high"
-    />
+  src="/bannerH.webp"
+  srcset="/bannerH-480.avif 480w, /bannerH-768.avif 768w, /bannerH-1600.avif 1600w, /bannerH-2000.avif 2000w"
+  sizes="(max-width: 600px) 480px, (max-width: 1024px) 768px, (max-width: 1600px) 1600px, 2000px"
+  alt="Banner principal"
+  class="absolute inset-0 w-full h-full object-cover rounded-[30px]"
+  loading="eager"
+  fetchpriority="high"
+/>
 
     <!-- Capa oscura -->
     <div class="absolute inset-0 bg-black/50 rounded-[30px]"></div>
