@@ -1,2 +1,4 @@
 @import "tailwindcss";
 @import "flowbite/src/themes/default";
+@import "@fontsource-variable/josefin-sans";
+@import "@fontsource-variable/space-grotesk";
