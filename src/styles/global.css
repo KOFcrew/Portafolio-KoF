@@ -2,3 +2,7 @@
 @import "flowbite/src/themes/default";
 @import "@fontsource-variable/josefin-sans";
 @import "@fontsource-variable/space-grotesk";
+
+html {
+  scroll-behavior: smooth;
+}
