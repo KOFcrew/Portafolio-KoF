@@ -25,7 +25,7 @@ const skills = [
 <section id="Habilidades" class="bg-gray-900 text-white py-12" style="background: radial-gradient(circle farthest-corner at 50% 100%, #264653ff 10%, #092327ff 80%, #1B263Bff 100%);">
 <!-- PROGRAMADORES -->
 <section class=" text-white py-12">
-  <h1 class="text-teal-400 text-3xl font-bold text-center">Programadores</h1>
+  <h1 class="text-5xl font-bold text-center">Programadores</h1>
   <div class="max-w-4xl mx-auto text-center">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-6 my-6">
       <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
@@ -83,10 +83,10 @@ const skills = [
   </div>
 </section>
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-teal-400 text-3xl font-bold mb-8">Habilidades</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-6 my-6">
+      <h2 class=" text-5xl font-bold mb-8">Habilidades</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-6 my-6" >
         {skills.map(skill => (
-          <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
+          <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center hover:scale-105 transition-transform duration-300">
             <img src={skill.image} alt={skill.name} class="h-24 mx-auto mb-4 rounded-lg" />
             <h3 class="text-orange-400 text-lg font-semibold">{skill.name}</h3>
             <p class="text-gray-400 text-sm mt-2 text-center">{skill.description}</p>
@@ -96,3 +96,18 @@ const skills = [
     </div>
   </div>
 </section>
+
+<style>
+  h1 {
+    font-family: "Space Grotesk Variable";
+  }
+  p {
+    font-family: "Josefin Sans Variable";
+  }
+  h2 {
+    font-family: "Space Grotesk Variable";
+  }
+  li {
+    font-family: "Josefin Sans Variable";
+  }
+</style>
