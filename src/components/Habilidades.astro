@@ -1,19 +1,87 @@
 ---
 import "../styles/global.css";
 const skills = [
-  { name: "HTML-5", description: "Build websites with the latest web technologies.", image: "/html5.svg", width: 96, height: 96 },
-  { name: "CSS", description: "Style your website with the latest web technologies.", image: "/css_old.svg", width: 96, height: 96 },
-  { name: "JAVASCRIPT", description: "Connect your site to the most popular apps out there.", image: "/javascript.svg", width: 96, height: 96 },
-  { name: "TAILWIND", description: "Build websites with the latest web technologies.", image: "/tailwindcss.svg", width: 96, height: 96 },
-  { name: "ASTRO", description: "Build websites with the latest web technologies.", image: "/astro.svg", width: 96, height: 96 },
-  { name: "REACT", description: "Build websites with the latest web technologies.", image: "/react_light.svg", width: 96, height: 96 },
-  { name: "PHP", description: "Build websites with the latest web technologies.", image: "/php.svg", width: 96, height: 96 },
-  { name: "LARAVEL", description: "Build websites with the latest web technologies.", image: "/laravel.svg", width: 96, height: 96 },
-  { name: "PYTHON", description: "Build websites with the latest web technologies.", image: "/python.svg", width: 96, height: 96 },
+  { name: "HTML-5", description: "Estructura web moderna con multimedia integrado y accesibilidad óptima.", 
+  image: "/html5.svg", width: 96, height: 96 },
+  { name: "CSS", description: "Diseño adaptable y experiencia visual coherente en todos los dispositivos.", 
+  image: "/css_old.svg", width: 96, height: 96 },
+  { name: "JAVASCRIPT", description: "Interactividad avanzada y experiencia de usuario fluida.", 
+  image: "/javascript.svg", width: 96, height: 96 },
+  { name: "TAILWIND", description: "Diseño personalizado con precisión y optimización móvil priorizada.", 
+  image: "/tailwindcss.svg", width: 96, height: 96 },
+  { name: "ASTRO", description: "Rendimiento web líder y SEO mejorado con carga ultrarrápida.", 
+  image: "/astro.svg", width: 96, height: 96 },
+  { name: "REACT", description: "Aplicaciones dinámicas y interfaces escalables sin recargas.", 
+  image: "/react_light.svg", width: 96, height: 96 },
+  { name: "PHP", description: "Funcionalidades backend robustas y gestión de contenido eficiente.", 
+  image: "/php.svg", width: 96, height: 96 },
+  { name: "LARAVEL", description: "Plataformas seguras, escalables y arquitectura profesional para operaciones críticas.", 
+  image: "/laravel.svg", width: 96, height: 96 },
+  { name: "PYTHON", description: "Soluciones inteligentes, automatización empresarial e integración con IA.", 
+  image: "/python.svg", width: 96, height: 96 },
 ];
 ---
 
-<section id="Habilidades" class="bg-gray-900 text-white py-12">
+<section id="Habilidades" class="bg-gray-900 text-white py-12" style="background: radial-gradient(circle farthest-corner at 50% 100%, #264653ff 10%, #092327ff 80%, #1B263Bff 100%);">
+<!-- PROGRAMADORES -->
+<section class=" text-white py-12">
+  <h1 class="text-teal-400 text-3xl font-bold text-center">Programadores</h1>
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-6 my-6">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
+        <img
+          src="/user.svg"
+          alt="Leo"
+          class="h-24 mx-auto mb-4 rounded-lg"
+          width="96"
+          height="96"
+        />
+        <h3 class="text-orange-400 text-lg font-semibold">Leo</h3>
+        <p class="text-gray-400 text-sm mt-2">
+          Igeniero de sistemas e informatica de la Universidad de Huanuco, con habilidades en desarrollo web, diseño y marketing.
+        </p>
+        <button
+          class="mt-4 px-4 py-2 bg-orange-400 text-white font-semibold rounded-lg shadow-md hover:bg-orange-500 transition"
+          >Contacto</button
+        >
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
+        <img
+          src="/user.svg"
+          alt="Joffre"
+          class="h-24 mx-auto mb-4 rounded-lg"
+          width="96"
+          height="96"
+        />
+        <h3 class="text-orange-400 text-lg font-semibold">Joffre</h3>
+        <p class="text-gray-400 text-sm mt-2">
+          Igeniero de sistemas e informatica de la Universidad de Huanuco, con habilidades en desarrollo web, diseño y marketing.
+        </p>
+        <button
+          class="mt-4 px-4 py-2 bg-orange-400 text-white font-semibold rounded-lg shadow-md hover:bg-orange-500 transition"
+          >Contacto</button
+        >
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
+        <img
+          src="/user.svg"
+          alt="Sebas"
+          class="h-24 mx-auto mb-4 rounded-lg"
+          width="96"
+          height="96"
+        />
+        <h3 class="text-orange-400 text-lg font-semibold">Sebas</h3>
+        <p class="text-gray-400 text-sm mt-2 text-justify">
+          Ingeniero de sistemas de la Universidad Hermilio Valdizan, con habilidades en desarrollo web, diseño y marketing.
+        </p>
+        <button
+          class="mt-4 px-4 py-2 bg-orange-400 text-white font-semibold rounded-lg shadow-md hover:bg-orange-500 transition"
+          >Contacto</button
+        >
+      </div>
+    </div>
+  </div>
+</section>
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-teal-400 text-3xl font-bold mb-8">Habilidades</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-6 my-6">
@@ -21,7 +89,7 @@ const skills = [
           <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
             <img src={skill.image} alt={skill.name} class="h-24 mx-auto mb-4 rounded-lg" />
             <h3 class="text-orange-400 text-lg font-semibold">{skill.name}</h3>
-            <p class="text-gray-400 text-sm mt-2 text-justify">{skill.description}</p>
+            <p class="text-gray-400 text-sm mt-2 text-center">{skill.description}</p>
           </div>
         ))}
       </div>
