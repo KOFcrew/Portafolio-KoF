@@ -1,15 +1,15 @@
 ---
 import "../styles/global.css";
 const skills = [
-  { name: "HTML-5", description: "Build websites with the latest web technologies.", image: "/html5.svg", width: 96, height: 96 },
-  { name: "CSS", description: "Style your website with the latest web technologies.", image: "/css_old.svg", width: 96, height: 96 },
-  { name: "JAVASCRIPT", description: "Connect your site to the most popular apps out there.", image: "/javascript.svg", width: 96, height: 96 },
-  { name: "TAILWIND", description: "Build websites with the latest web technologies.", image: "/tailwindcss.svg", width: 96, height: 96 },
-  { name: "ASTRO", description: "Build websites with the latest web technologies.", image: "/astro.svg", width: 96, height: 96 },
-  { name: "REACT", description: "Build websites with the latest web technologies.", image: "/react_light.svg", width: 96, height: 96 },
-  { name: "PHP", description: "Build websites with the latest web technologies.", image: "/php.svg", width: 96, height: 96 },
-  { name: "LARAVEL", description: "Build websites with the latest web technologies.", image: "/laravel.svg", width: 96, height: 96 },
-  { name: "PYTHON", description: "Build websites with the latest web technologies.", image: "/python.svg", width: 96, height: 96 },
+  { name: "HTML-5", description: "Lenguaje de marcado para estructurar contenido web, con soporte multimedia, semántica mejorada y APIs para aplicaciones interactivas. Base fundamental de toda página web moderna.", image: "/html5.svg", width: 96, height: 96 },
+  { name: "CSS", description: "Hojas de estilo para diseñar y maquetar páginas HTML, controlando colores, layouts, responsividad y animaciones. Separa la presentación del contenido.", image: "/css_old.svg", width: 96, height: 96 },
+  { name: "JAVASCRIPT", description: "Lenguaje de programación para añadir interactividad, dinamismo y manejo de eventos en navegadores. Base del desarrollo web front-end y extendido a back-end (Node.js).", image: "/javascript.svg", width: 96, height: 96 },
+  { name: "TAILWIND", description: "Framework CSS utility-first que permite diseñar interfaces mediante clases predefinidas en el HTML. Enfoque modular para crear diseños personalizados sin CSS tradicional.", image: "/tailwindcss.svg", width: 96, height: 96 },
+  { name: "ASTRO", description: "Framework web para construir sitios estáticos y dinámicos ultra-rápidos, combinando componentes de cualquier librería (React, Vue) y enviando HTML mínimo con partial hydration", image: "/astro.svg", width: 96, height: 96 },
+  { name: "REACT", description: "Librería JavaScript para construir interfaces de usuario mediante componentes reutilizables y gestión de estado. Usa Virtual DOM para optimizar rendimiento. Dominante en front-end moderno.", image: "/react_light.svg", width: 96, height: 96 },
+  { name: "PHP", description: "Lenguaje de scripting server-side para desarrollo web, integrable con HTML. Usado en back-end, CMS (WordPress) y aplicaciones dinámicas.", image: "/php.svg", width: 96, height: 96 },
+  { name: "LARAVEL", description: "Framework PHP elegante y robusto con sintaxis expresiva, ORM (Eloquent), sistema de rutas y plantillas Blade. Favorece arquitectura MVC y buenas prácticas.", image: "/laravel.svg", width: 96, height: 96 },
+  { name: "PYTHON", description: "Lenguaje versátil y legible para web (Django, Flask), análisis de datos, IA, scripting y automatización. Destaca por su sintaxis clara y comunidad activa.", image: "/python.svg", width: 96, height: 96 },
 ];
 ---
 
@@ -21,7 +21,7 @@ const skills = [
           <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
             <img src={skill.image} alt={skill.name} class="h-24 mx-auto mb-4 rounded-lg" />
             <h3 class="text-orange-400 text-lg font-semibold">{skill.name}</h3>
-            <p class="text-gray-400 text-sm mt-2">{skill.description}</p>
+            <p class="text-gray-400 text-sm mt-2 text-justify">{skill.description}</p>
           </div>
         ))}
       </div>
