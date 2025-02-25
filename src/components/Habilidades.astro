@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import Boton2 from "./Boton2.astro";
+import Boton3 from "./Boton3.astro";
 const skills = [
   { name: "HTML-5", description: "Estructura web moderna con multimedia integrado y accesibilidad óptima.", 
   image: "/html5.svg", width: 96, height: 96 },
@@ -40,10 +42,9 @@ const skills = [
         <p class="text-gray-400 text-sm mt-2">
           Igeniero de sistemas e informatica de la Universidad de Huanuco, con habilidades en desarrollo web, diseño y marketing.
         </p>
-        <button
-          class="mt-4 px-4 py-2 bg-orange-400 text-white font-semibold rounded-lg shadow-md hover:bg-orange-500 transition"
-          >Contacto</button
-        >
+        <Boton2>
+          Contacto
+        </Boton2>
       </div>
       <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
         <img
@@ -74,10 +75,8 @@ const skills = [
         <p class="text-gray-400 text-sm mt-2 text-justify">
           Ingeniero de sistemas de la Universidad Hermilio Valdizan, con habilidades en desarrollo web, diseño y marketing.
         </p>
-        <button
-          class="mt-4 px-4 py-2 bg-orange-400 text-white font-semibold rounded-lg shadow-md hover:bg-orange-500 transition"
-          >Contacto</button
-        >
+        <Boton3>
+        </Boton3>
       </div>
     </div>
   </div>
