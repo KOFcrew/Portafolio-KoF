@@ -3,25 +3,25 @@ import { useSwipeable } from "react-swipeable"; // opcional, para swipe
 
 const companies = [
   {
-    name: "Empresa 1",
+    name: "Empresa popop",
     logo: "user.svg",
     github: "https://github.com/empresa1",
     website: "https://empresa1.com",
   },
   {
-    name: "Empresa 2",
+    name: "Empresa popo2",
     logo: "nmst.svg",
     github: "https://github.com/empresa2",
     website: "https://empresa2.com",
   },
   {
-    name: "Empresa 3",
+    name: "Empresa popo3",
     logo: "knight.svg",
     github: "https://github.com/empresa3",
     website: "https://empresa3.com",
   },
   {
-    name: "Empresa 4",
+    name: "Empresa popo24",
     logo: "astro.svg",
     github: "https://github.com/empresa4",
     website: "https://empresa4.com",
