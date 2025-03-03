@@ -30,7 +30,7 @@ const skills = [
   <h1 class="sm:text-5xl font-bold text-center text-[40px]">Programadores</h1>
   <div class="max-w-4xl mx-auto text-center">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-6 my-6">
-      <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md shadow-green-500 text-center">
         <img
           src="/user.svg"
           alt="Leo"
@@ -46,7 +46,7 @@ const skills = [
           Contacto
         </Boton2>
       </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md shadow-green-500 text-center">
         <img
           src="/user.svg"
           alt="Joffre"
@@ -62,7 +62,7 @@ const skills = [
           Contacto
         </Boton2>
       </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md shadow-green-500 text-center">
         <img
           src="/user.svg"
           alt="Sebas"
@@ -85,7 +85,7 @@ const skills = [
       <h2 class=" text-5xl font-bold mb-8">Habilidades</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-6 my-6" >
         {skills.map(skill => (
-          <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center hover:scale-105 transition-transform duration-300">
+          <div class="bg-gray-800 p-6 rounded-lg shadow-md shadow-[#2A9D8F] text-center hover:scale-105 transition-transform duration-300">
             <img src={skill.image} alt={skill.name} class="h-24 mx-auto mb-4 rounded-lg" />
             <h3 class="text-orange-400 text-lg font-semibold">{skill.name}</h3>
             <p class="text-gray-400 text-16px mt-2 text-center">{skill.description}</p>
@@ -110,3 +110,9 @@ const skills = [
     font-family: "Josefin Sans Variable";
   }
 </style>
+
+
+<!-- Colores de la página de Habilidades
+- Opcion 1: shadow-yellow-800
+- Opcion 2: shadow-orange-400
+- Opcion 3: shadow-[#2A9D8F] -->
