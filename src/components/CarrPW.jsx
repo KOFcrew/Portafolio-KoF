@@ -1,27 +1,29 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useSwipeable } from "react-swipeable"; // opcional, para swipe
+import "../styles/global.css";
+import BotonReact from "./BotonReact.jsx";
 
 const companies = [
   {
-    name: "Empresa popop",
-    logo: "user.svg",
+    name: "Namaste",
+    logo: "PortadaNMT.avif",
     github: "https://github.com/empresa1",
     website: "https://empresa1.com",
   },
   {
-    name: "Empresa popo2",
+    name: "Pagina Web la empresa 2",
     logo: "nmst.svg",
     github: "https://github.com/empresa2",
     website: "https://empresa2.com",
   },
   {
-    name: "Empresa popo3",
+    name: "Pagina Web la empresa 3",
     logo: "knight.svg",
     github: "https://github.com/empresa3",
     website: "https://empresa3.com",
   },
   {
-    name: "Empresa popo24",
+    name: "Pagina Web la empresa 4",
     logo: "astro.svg",
     github: "https://github.com/empresa4",
     website: "https://empresa4.com",
@@ -66,44 +68,79 @@ const Carousel = () => {
   };
 
   return (
-    <div className="carousel-container" {...handlers}>
-      <div className="carousel-wrapper">
+    <div className="relative max-w-5xl mx-auto p-5" {...handlers}>
+      <div className="overflow-hidden relative w-full">
         <div
-          className="carousel-inner"
+          className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {companies.map((company, index) => (
-            <div className="carousel-item" key={index}>
-              <div className="card">
-                <img
+            <div className="min-w-full p-4 box-border" key={index}>
+              <div
+                className="bg-gray-700 rounded-2xl p-8 shadow-lg min-h-[400px] flex flex-col items-center justify-center bg-cover bg-center"
+                style={{ backgroundImage: `url(${company.logo})` }}
+                alt={company.name}
+              >
+                {/* <img
                   src={company.logo}
                   alt={company.name}
-                  className="company-logo"
-                />
-                <h3 className="company-name">{company.name}</h3>
-                <div className="links-container">
-                  <a
+                  className="max-w-[200px] h-auto mb-5 object-contain"
+                /> */}
+              </div>
+              <div className="flex flex-col items-center">
+                <h3 className="text-black my-4 text-2xl">{company.name}</h3>
+                <div className="flex gap-4 mt-5 flex-wrap justify-center">
+                  <BotonReact
                     href={company.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="link-button"
+                    className="inline-flex items-center px-6 py-3 rounded-full bg-gray-800 text-white transition-all duration-300 border border-gray-600 hover:bg-gray-600 transform hover:-translate-y-1"
                   >
-                    <span role="img" aria-label="GitHub">
-                      💻
-                    </span>{" "}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="mr-2"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                    </svg>
                     GitHub
-                  </a>
-                  <a
+                  </BotonReact>
+                  <BotonReact
                     href={company.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="link-button"
+                    className="inline-flex items-center px-6 py-3 rounded-full bg-gray-800 text-white transition-all duration-300 border border-gray-600 hover:bg-gray-600 transform hover:-translate-y-1"
                   >
-                    <span role="img" aria-label="Website">
-                      🌐
-                    </span>{" "}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      className="mr-2"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-world"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                      <path d="M3.6 9h16.8" />
+                      <path d="M3.6 15h16.8" />
+                      <path d="M11.5 3a17 17 0 0 0 0 18" />
+                      <path d="M12.5 3a17 17 0 0 1 0 18" />
+                    </svg>
                     Website
-                  </a>
+                  </BotonReact>
                 </div>
               </div>
             </div>
@@ -111,164 +148,29 @@ const Carousel = () => {
         </div>
       </div>
 
-      <button className="nav-button prev" onClick={goPrev}>
+      <button
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-red-400  bg-opacity-20 border-none text-white p-4 rounded-full cursor-pointer transition-all duration-300 z-10 backdrop-blur-md hover:bg-opacity-30 hover:scale-110"
+        onClick={goPrev}
+      >
         &#10094;
       </button>
-      <button className="nav-button next" onClick={goNext}>
+      <button
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-red-400 bg-opacity-20 border-none text-white p-4 rounded-full cursor-pointer transition-all duration-300 z-10 backdrop-blur-md hover:bg-opacity-30 hover:scale-110"
+        onClick={goNext}
+      >
         &#10095;
       </button>
 
       <style>{`
-        .carousel-container {
-          position: relative;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 20px;
-        }
-
-        .carousel-wrapper {
-          overflow: hidden;
-          position: relative;
-          width: 100%;
-        }
-
-        .carousel-inner {
-          display: flex;
-          transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .carousel-item {
-          min-width: 100%;
-          padding: 0 15px;
-          box-sizing: border-box;
-        }
-
-        .card {
-          background: #4e2747;
-          border-radius: 15px;
-          padding: 30px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          min-height: 400px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .company-logo {
-          max-width: 200px;
-          height: auto;
-          margin-bottom: 20px;
-          object-fit: contain;
-        }
-
-        .company-name {
-          color: #fff;
-          margin: 15px 0;
-          font-size: 1.5rem;
-        }
-
-        .links-container {
-          display: flex;
-          gap: 15px;
-          margin-top: 20px;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-
-        .link-button {
-          display: inline-flex;
-          align-items: center;
-          padding: 12px 25px;
-          border-radius: 25px;
-          background: #2d3748;
-          color: white;
-          text-decoration: none;
-          transition: all 0.3s ease;
-          border: 1px solid #4a5568;
-        }
-
-        .link-button:hover {
-          background: #4a5568;
-          transform: translateY(-2px);
-        }
-
-        .nav-button {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          background: rgba(255, 255, 255, 0.2);
-          border: none;
-          color: white;
-          padding: 15px;
-          border-radius: 50%;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          z-index: 10;
-          backdrop-filter: blur(5px);
-        }
-
-        .nav-button:hover {
-          background: rgba(255, 255, 255, 0.3);
-          transform: translateY(-50%) scale(1.1);
-        }
-
-        .prev {
-          left: 10px;
-        }
-
-        .next {
-          right: 10px;
-        }
-
-        @media (max-width: 768px) {
-          .card {
-            padding: 20px;
-            min-height: 350px;
-          }
-
-          .company-logo {
-            max-width: 150px;
-          }
-
-          .company-name {
-            font-size: 1.2rem;
-          }
-
-          .link-button {
-            padding: 10px 20px;
-            font-size: 0.9rem;
-          }
-
-          .nav-button {
-            padding: 12px;
-            font-size: 0.8rem;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .carousel-container {
-            padding: 10px;
-          }
-
-          .card {
-            min-height: 300px;
-          }
-
-          .company-logo {
-            max-width: 120px;
-          }
-
-          .links-container {
-            flex-direction: column;
-            width: 100%;
-          }
-
-          .link-button {
-            width: 100%;
-            justify-content: center;
-          }
-        }
+      .h3 {
+        font-family: "Space Grotesk Variable";
+      }
+      span {
+        font-family: "Josefin Sans Variable";
+      }
+      a {
+        font-family: "Space Grotesk Variable";
+      }
       `}</style>
     </div>
   );
