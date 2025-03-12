@@ -10,49 +10,77 @@ import CheckIcon from "./CheckIcon.astro";
 >
   <div class="max-w-6xl mx-auto text-center">
     <h2 class="text-5xl font-bold mb-20">Elige el plan adecuado para ti</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-40">
       <!-- Plan Básico -->
       <div
         class="bg-black/40 backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-white/20 flex flex-col justify-between h-full
   transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl hover:border-white/40"
       >
-        <h3 class="text-3xl font-semibold">Plan Básico</h3>
-        <h3 class="text-2xl font-semibold">
-          <span class="text-4xl"> S/ 80.00</span>
+        <h3 class="text-3xl font-semibold mb-2">Plan Básico</h3>
+        <h3 class="text-2xl font-semibold top-0">
+          <span class="text-4xl"> S/ 650.00</span>
         </h3>
         <p class="text-gray-400 mt-2 text-[20px]">
           Ideal para emprendedores que necesitan presencia online rápida
         </p>
-        <ul class="mt-4 space-y-2 text-gray-300">
-          <li class="flex items-start text-left text-[18px]">
+        <ul class="mt-4 text-gray-300">
+          <li
+            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500 first:border-t-0"
+          >
+            <div>
+              <CheckIcon />
+            </div>
+            <span><span class="text-green-500">1</span> página única</span>
+          </li>
+          <li
+            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
+          >
             <div>
               <CheckIcon />
             </div>
             <span
-              >Landing Page Profesional (1 sección con información clave)</span
+              >Hasta <span class="text-green-500">5 secciones</span> personalizadas</span
             >
           </li>
-          <li class="flex items-start text-left text-[18px]">
+          <li
+            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
+          >
             <div>
               <CheckIcon />
             </div>
-            <span>Diseño optimizado y responsive</span>
+            <span
+              >Integración con <span class="text-green-500">WhatsApp</span> y <span
+                class="text-green-500">redes sociales</span
+              ></span
+            >
           </li>
-          <li class="flex items-start text-left text-[18px]">
+          <li
+            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
+          >
             <div>
               <CheckIcon />
             </div>
-            <span>Integración de redes sociales</span>
+            <span>Hosting y dominio</span>
           </li>
-          <li class="flex items-start text-left text-[18px]">
+          <li
+            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
+          >
             <div>
               <CheckIcon />
             </div>
-            <span>Entrega en 3 días</span>
+            <span>Diseño responsive</span>
+          </li>
+          <li
+            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-b-2 border-gray-500"
+          >
+            <div>
+              <CheckIcon />
+            </div>
+            <span>Entrega en <span class="text-green-500">5 días</span></span>
           </li>
         </ul>
         <div class="mt-5 flex justify-center">
-          <Boton> Elige un plan </Boton>
+          <Boton> Solicitar servicio </Boton>
         </div>
       </div>
 
@@ -60,47 +88,86 @@ import CheckIcon from "./CheckIcon.astro";
         class="bg-black/40 backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-white/20 flex flex-col justify-between h-full
   transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl hover:border-white/40"
       >
-        <h3 class="text-3xl font-semibold">Plan Avanzado</h3>
-        <h3 class="text-2xl font-semibold">
-          <span class="text-4xl"> S/ 150.00</span>
+        <h3 class="text-3xl font-semibold mb-2">Plan Avanzado</h3>
+        <h3 class="text-2xl font-semibold top-0">
+          <span class="text-4xl"> S/ 1,500.00</span>
         </h3>
         <p class="text-gray-400 mt-2 text-[20px]">
           Perfecto para negocios que buscan destacar y generar clientes
         </p>
-        <ul class="mt-4 space-y-2 text-gray-300">
-          <li class="flex items-start text-left text-[18px]">
+        <ul class="mt-4 text-gray-300">
+          <li
+            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500 first:border-t-0"
+          >
             <div>
               <CheckIcon />
             </div>
             <span
-              >Sitio web de hasta 5 páginas (Inicio, Servicios, Contacto, etc.)</span
+              >Hasta <span class="text-green-500">4 páginas</span> con <span
+                class="text-green-500">3 secciones</span
+              > cada una</span
             >
           </li>
-          <li class="flex items-start text-left text-[18px]">
+          <li
+            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
+          >
             <div>
               <CheckIcon />
             </div>
-            <span>Mapa de ubicación</span>
+            <span>
+              <span class="text-green-500">Formulario</span> de contacto</span
+            >
           </li>
-          <li class="flex items-start text-left text-[18px]">
+          <li
+            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
+          >
             <div>
               <CheckIcon />
             </div>
-            <span>Optimización básica para SEO</span>
+            <span
+              >Integración con <span class="text-green-500">Google Maps</span>,
+              WhatsApp y redes sociales</span
+            >
           </li>
-          <li class="flex items-start text-left text-[18px]">
+          <li
+            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
+          >
             <div>
               <CheckIcon />
             </div>
-            <span>Entrega en 7 días</span>
+            <span>Hosting y dominio</span>
+          </li>
+          <li
+            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
+          >
+            <div>
+              <CheckIcon />
+            </div>
+            <span>Diseño responsive y personalizado</span>
+          </li>
+          <li
+            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
+          >
+            <div>
+              <CheckIcon />
+            </div>
+            <span>Optimización <span class="text-green-500">SEO</span></span>
+          </li>
+          <li
+            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-b-2 border-gray-500"
+          >
+            <div>
+              <CheckIcon />
+            </div>
+            <span>Entrega en <span class="text-green-500">7 días</span></span>
           </li>
         </ul>
-        <div class="mt-5">
-          <Boton> Elige un plan </Boton>
+        <div class="mt-5 flex justify-center">
+          <Boton> Solicitar servicio </Boton>
         </div>
       </div>
 
-      <div
+      <!-- <div
         class="bg-black/40 backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-white/20 flex flex-col justify-between h-full
   transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl hover:border-white/40"
       >
@@ -140,7 +207,7 @@ import CheckIcon from "./CheckIcon.astro";
         <div class="mt-5">
           <Boton> Elige un plan </Boton>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
