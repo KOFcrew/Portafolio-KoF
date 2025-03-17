@@ -1,6 +1,7 @@
 ---
 import Boton from "./Boton.astro";
 import CheckIcon from "./CheckIcon.astro";
+import AosClient from "./AosClient.jsx";
 ---
 
 <section
@@ -8,162 +9,171 @@ import CheckIcon from "./CheckIcon.astro";
   class="text-white py-16 px-4"
   style="background: radial-gradient(circle farthest-corner at 50% 100%, #264653ff 10%, #092327ff 80%, #1B263Bff 100%);"
 >
+  <!-- Inicializa AOS solo en el cliente -->
+  <AosClient client:only="react" />
   <div class="max-w-6xl mx-auto text-center">
     <h2 class="text-5xl font-bold mb-20">Elige el plan adecuado para ti</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-40">
       <!-- Plan Básico -->
-      <div
-        class="bg-black/40 backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-white/20 flex flex-col justify-between h-full
-  transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl hover:border-white/40"
-      >
-        <h3 class="text-3xl font-semibold mb-2">Plan Básico</h3>
-        <h3 class="text-2xl font-semibold top-0">
-          <span class="text-4xl"> S/ 650.00</span>
-        </h3>
-        <p class="text-gray-400 mt-2 text-[20px]">
-          Ideal para emprendedores que necesitan presencia online rápida
-        </p>
-        <ul class="mt-4 text-gray-300">
-          <li
-            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500 first:border-t-0"
-          >
-            <div>
-              <CheckIcon />
-            </div>
-            <span><span class="text-green-500">1</span> página única</span>
-          </li>
-          <li
-            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
-          >
-            <div>
-              <CheckIcon />
-            </div>
-            <span
-              >Hasta <span class="text-green-500">5 secciones</span> personalizadas</span
+      <div class="group" data-aos="flip-left">
+        <div
+          class="bg-black/40 backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-white/20 flex flex-col justify-between h-full
+          transition-transform duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-2xl group-hover:border-white/40"
+        >
+          <!-- Título del plan -->
+          <h3 class="text-3xl font-semibold mb-2">Plan Básico</h3>
+
+          <!-- Precio -->
+          <h3 class="text-2xl font-semibold top-0">
+            <span class="text-4xl">S/ 650.00</span>
+          </h3>
+
+          <!-- Descripción -->
+          <p class="text-gray-400 mt-2 text-[20px]">
+            Ideal para emprendedores que necesitan presencia online rápida
+          </p>
+
+          <!-- Lista de características -->
+          <ul class="mt-4 text-gray-300">
+            <li
+              class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500 first:border-t-0"
             >
-          </li>
-          <li
-            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
-          >
-            <div>
-              <CheckIcon />
-            </div>
-            <span
-              >Integración con <span class="text-green-500">WhatsApp</span> y <span
-                class="text-green-500">redes sociales</span
-              ></span
+              <div><CheckIcon /></div>
+              <span><span class="text-green-500">1</span> página única</span>
+            </li>
+
+            <li
+              class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
             >
-          </li>
-          <li
-            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
-          >
-            <div>
-              <CheckIcon />
-            </div>
-            <span>Hosting y dominio</span>
-          </li>
-          <li
-            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
-          >
-            <div>
-              <CheckIcon />
-            </div>
-            <span>Diseño responsive</span>
-          </li>
-          <li
-            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-b-2 border-gray-500"
-          >
-            <div>
-              <CheckIcon />
-            </div>
-            <span>Entrega en <span class="text-green-500">5 días</span></span>
-          </li>
-        </ul>
-        <div class="mt-5 flex justify-center">
-          <Boton> Solicitar servicio </Boton>
+              <div><CheckIcon /></div>
+              <span>
+                Hasta <span class="text-green-500">5 secciones</span> personalizadas
+              </span>
+            </li>
+
+            <li
+              class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
+            >
+              <div><CheckIcon /></div>
+              <span>
+                Integración con <span class="text-green-500">WhatsApp</span> y
+                <span class="text-green-500">redes sociales</span>
+              </span>
+            </li>
+
+            <li
+              class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
+            >
+              <div><CheckIcon /></div>
+              <span>Hosting y dominio</span>
+            </li>
+
+            <li
+              class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
+            >
+              <div><CheckIcon /></div>
+              <span>Diseño responsive</span>
+            </li>
+
+            <li
+              class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-b-2 border-gray-500"
+            >
+              <div><CheckIcon /></div>
+              <span>Entrega en <span class="text-green-500">5 días</span></span>
+            </li>
+          </ul>
+
+          <!-- Botón de acción -->
+          <div class="mt-5 flex justify-center">
+            <Boton>Solicitar servicio</Boton>
+          </div>
         </div>
       </div>
 
-      <div
-        class="bg-black/40 backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-white/20 flex flex-col justify-between h-full
-  transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl hover:border-white/40"
-      >
-        <h3 class="text-3xl font-semibold mb-2">Plan Avanzado</h3>
-        <h3 class="text-2xl font-semibold top-0">
-          <span class="text-4xl"> S/ 1,500.00</span>
-        </h3>
-        <p class="text-gray-400 mt-2 text-[20px]">
-          Perfecto para negocios que buscan destacar y generar clientes
-        </p>
-        <ul class="mt-4 text-gray-300">
-          <li
-            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500 first:border-t-0"
-          >
-            <div>
-              <CheckIcon />
-            </div>
-            <span
-              >Hasta <span class="text-green-500">4 páginas</span> con <span
-                class="text-green-500">3 secciones</span
-              > cada una</span
+      <div class="group" data-aos="flip-right">
+        <div
+          class="bg-black/40 backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-white/20 flex flex-col justify-between h-full
+          transition-transform duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-2xl group-hover:border-white/40"
+        >
+          <!-- Título del plan -->
+          <h3 class="text-3xl font-semibold mb-2">Plan Avanzado</h3>
+
+          <!-- Precio -->
+          <h3 class="text-2xl font-semibold top-0">
+            <span class="text-4xl">S/ 1,500.00</span>
+          </h3>
+
+          <!-- Descripción -->
+          <p class="text-gray-400 mt-2 text-[20px]">
+            Perfecto para negocios que buscan destacar y generar clientes
+          </p>
+
+          <!-- Lista de características -->
+          <ul class="mt-4 text-gray-300">
+            <li
+              class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500 first:border-t-0"
             >
-          </li>
-          <li
-            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
-          >
-            <div>
-              <CheckIcon />
-            </div>
-            <span>
-              <span class="text-green-500">Formulario</span> de contacto</span
+              <div><CheckIcon /></div>
+              <span>
+                Hasta <span class="text-green-500">4 páginas</span> con
+                <span class="text-green-500">3 secciones</span> cada una
+              </span>
+            </li>
+
+            <li
+              class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
             >
-          </li>
-          <li
-            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
-          >
-            <div>
-              <CheckIcon />
-            </div>
-            <span
-              >Integración con <span class="text-green-500">Google Maps</span>,
-              WhatsApp y redes sociales</span
+              <div><CheckIcon /></div>
+              <span>
+                <span class="text-green-500">Formulario</span> de contacto
+              </span>
+            </li>
+
+            <li
+              class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
             >
-          </li>
-          <li
-            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
-          >
-            <div>
-              <CheckIcon />
-            </div>
-            <span>Hosting y dominio</span>
-          </li>
-          <li
-            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
-          >
-            <div>
-              <CheckIcon />
-            </div>
-            <span>Diseño responsive y personalizado</span>
-          </li>
-          <li
-            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
-          >
-            <div>
-              <CheckIcon />
-            </div>
-            <span>Optimización <span class="text-green-500">SEO</span></span>
-          </li>
-          <li
-            class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-b-2 border-gray-500"
-          >
-            <div>
-              <CheckIcon />
-            </div>
-            <span>Entrega en <span class="text-green-500">7 días</span></span>
-          </li>
-        </ul>
-        <div class="mt-5 flex justify-center">
-          <Boton> Solicitar servicio </Boton>
+              <div><CheckIcon /></div>
+              <span>
+                Integración con <span class="text-green-500">Google Maps</span>,
+                WhatsApp y redes sociales
+              </span>
+            </li>
+
+            <li
+              class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
+            >
+              <div><CheckIcon /></div>
+              <span>Hosting y dominio</span>
+            </li>
+
+            <li
+              class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
+            >
+              <div><CheckIcon /></div>
+              <span>Diseño responsive y personalizado</span>
+            </li>
+
+            <li
+              class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-gray-500"
+            >
+              <div><CheckIcon /></div>
+              <span>
+                Optimización <span class="text-green-500">SEO</span>
+              </span>
+            </li>
+
+            <li
+              class="flex items-start text-left text-[18px] gap-2 py-4 border-t-2 border-b-2 border-gray-500"
+            >
+              <div><CheckIcon /></div>
+              <span>Entrega en <span class="text-green-500">7 días</span></span>
+            </li>
+          </ul>
+
+          <!-- Botón de acción -->
+          <div class="mt-5 flex justify-center">
+            <Boton>Solicitar servicio</Boton>
+          </div>
         </div>
       </div>
 
