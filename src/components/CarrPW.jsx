@@ -5,26 +5,30 @@ import BotonReact from "./BotonReact.jsx";
 
 const companies = [
   {
-    name: "Namaste",
+    name: "Namaste SPA",
     logo: "PortadaNMT.avif",
+    desc: "Esta página web garantiza una experiencia digital atractiva y funcional, alineada con la filosofía de la SPA, potenciando su presencia en línea y facilitando la captación de clientes.",
     github: "https://github.com/empresa1",
     website: "https://empresa1.com",
   },
   {
-    name: "Pagina Web la empresa 2",
-    logo: "nmst.svg",
+    name: "EMPRESA 2",
+    logo: "proximamente.png",
+    desc: "DESCRIPCIÓN DEL PROYECTO",
     github: "https://github.com/empresa2",
     website: "https://empresa2.com",
   },
   {
-    name: "Pagina Web la empresa 3",
-    logo: "knight.svg",
+    name: "EMPRESA 3",
+    logo: "proximamente.png",
+    desc: "DESCRIPCIÓN DEL PROYECTO",
     github: "https://github.com/empresa3",
     website: "https://empresa3.com",
   },
   {
-    name: "Pagina Web la empresa 4",
-    logo: "astro.svg",
+    name: "EMPRESA 4",
+    logo: "proximamente.png",
+    desc: "DESCRIPCIÓN DEL PROYECTO",
     github: "https://github.com/empresa4",
     website: "https://empresa4.com",
   },
@@ -77,7 +81,7 @@ const Carousel = () => {
           {companies.map((company, index) => (
             <div className="min-w-full p-4 box-border" key={index}>
               <div
-                className="bg-gray-700 rounded-2xl p-8 shadow-lg min-h-[400px] flex flex-col items-center justify-center bg-cover bg-center"
+                className="shadow-gray-800 rounded-2xl p-8 shadow-lg min-h-[400px] flex flex-col items-center justify-center bg-cover bg-center"
                 style={{ backgroundImage: `url(${company.logo})` }}
                 alt={company.name}
               >
@@ -89,6 +93,7 @@ const Carousel = () => {
               </div>
               <div className="flex flex-col items-center">
                 <h3 className="text-black my-4 text-2xl">{company.name}</h3>
+                <h4 className="text-black my-4 text-xl">{company.desc}</h4>
                 <div className="flex gap-4 mt-5 flex-wrap justify-center">
                   <BotonReact
                     href={company.github}
@@ -149,13 +154,13 @@ const Carousel = () => {
       </div>
 
       <button
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-red-400  bg-opacity-20 border-none text-white p-4 rounded-full cursor-pointer transition-all duration-300 z-10 backdrop-blur-md hover:bg-opacity-30 hover:scale-110"
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-sky-900  bg-opacity-20 border-none text-white p-4 rounded-full cursor-pointer transition-all duration-300 z-10 backdrop-blur-md hover:bg-opacity-30 hover:scale-110"
         onClick={goPrev}
       >
         &#10094;
       </button>
       <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-red-400 bg-opacity-20 border-none text-white p-4 rounded-full cursor-pointer transition-all duration-300 z-10 backdrop-blur-md hover:bg-opacity-30 hover:scale-110"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-sky-900 bg-opacity-20 border-none text-white p-4 rounded-full cursor-pointer transition-all duration-300 z-10 backdrop-blur-md hover:bg-opacity-30 hover:scale-110"
         onClick={goNext}
       >
         &#10095;
